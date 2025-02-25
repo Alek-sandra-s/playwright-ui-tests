@@ -2,7 +2,9 @@
   "name": "playwright-ui-tests",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "local": "serve ./src/simpleForm.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
