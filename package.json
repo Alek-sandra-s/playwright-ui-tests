@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "local": "serve ./src/simpleForm.html"
+    "local": "serve ./src/simpleForm.html",
+    "test:debug:chromium": "playwright test --debug --project=chromium",
+    "init:playwright": "playwright install --with-deps",
+    "test": "playwright test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier:format": "prettier --write \"tests/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "prettier:check": "prettier --check \"tests/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "types:check": "npx tsc --noEmit"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +20,15 @@
   "devDependencies": {
     "@playwright/test": "^1.50.1",
     "@types/node": "^22.13.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.5.0",
+    "@eslint/js": "^9.12.0",
+    "eslint": "^9.12.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.8.1"
   }
 }
